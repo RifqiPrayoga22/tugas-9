@@ -136,6 +136,29 @@
             display: block;
         }
 
+        /* Tambahan: output box */
+        .output-box {
+            margin: 0.75rem 1.25rem 1.25rem 1.25rem;
+            background: #0a0c15;
+            border: 1px solid #334155;
+            border-radius: 0.5rem;
+            padding: 0.75rem 1rem;
+            font-family: 'SF Mono', 'Fira Code', 'Courier New', monospace;
+            font-size: 0.7rem;
+            color: #86efac;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .output-box::before {
+            content: "Output:";
+            display: block;
+            font-size: 0.65rem;
+            color: #facc15;
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+        }
+
         @media (max-width: 640px) {
             .dartpad-frame {
                 height: 400px;
@@ -146,7 +169,7 @@
             .slide-judul {
                 font-size: 1rem;
             }
-            .teori-box, .code-wrapped, .dartpad-container {
+            .teori-box, .code-wrapped, .dartpad-container, .output-box {
                 margin-left: 1rem;
                 margin-right: 1rem;
             }
@@ -226,8 +249,11 @@ class Stringutils {
     } 
 }</code></div>
             <div class="dartpad-container">
-                <iframe class="dartpad-frame" src="https://dartpad.dev/embed-flutter.html?id=08cda668c72edf3371197e8a4f90d293&theme=dark&run=true" loading="lazy" frameborder="0" allow="scripts; allow-same-origin; allow-forms; allow-popups" allowfullscreen title="DartPad Slide 3"></iframe>
+                <iframe class="dartpad-frame" src="https://dartpad.dev/embed-dart.html?id=08cda668c72edf3371197e8a4f90d293&theme=dark&run=true" loading="lazy" frameborder="0" allow="scripts; allow-same-origin; allow-forms; allow-popups" allowfullscreen title="DartPad Slide 3"></iframe>
             </div>
+            <div class="output-box">Original name: john
+Capitalized name: John
+Is "test@mail.com" an email? true</div>
         </div>
 
         <!-- SLIDE 4: Solusi dengan Extension Methods (halaman 5) -->
@@ -263,8 +289,12 @@ extension StringExtensions on String {
     }  
 }</code></div>
             <div class="dartpad-container">
-                <iframe class="dartpad-frame" src="https://dartpad.dev/embed-flutter.html?id=0944b5196a022b11ae98a5a3dbad28a1&theme=dark&run=true" loading="lazy" frameborder="0" allow="scripts; allow-same-origin; allow-forms; allow-popups" allowfullscreen title="DartPad Slide 4"></iframe>
+                <iframe class="dartpad-frame" src="https://dartpad.dev/embed-dart.html?id=0944b5196a022b11ae98a5a3dbad28a1&theme=dark&run=true" loading="lazy" frameborder="0" allow="scripts; allow-same-origin; allow-forms; allow-popups" allowfullscreen title="DartPad Slide 4"></iframe>
             </div>
+            <div class="output-box">Original name: john
+Capitalized name: John
+Is "test@mail.com" an email? true
+Reversed "hello": olleh</div>
         </div>
 
         <!-- SLIDE 5: Target Extension (halaman 7) -->
@@ -287,8 +317,10 @@ void main(){
     print(numbers.average); // 3.0 
 }</code></div>
             <div class="dartpad-container">
-                <iframe class="dartpad-frame" src="https://dartpad.dev/embed-flutter.html?id=6d4c32db5a6e6ecae456fdadc64f8117&theme=dark&run=true" loading="lazy" frameborder="0" allow="scripts; allow-same-origin; allow-forms; allow-popups" allowfullscreen title="DartPad Slide 5"></iframe>
+                <iframe class="dartpad-frame" src="https://dartpad.dev/embed-dart.html?id=6d4c32db5a6e6ecae456fdadc64f8117&theme=dark&run=true" loading="lazy" frameborder="0" allow="scripts; allow-same-origin; allow-forms; allow-popups" allowfullscreen title="DartPad Slide 5"></iframe>
             </div>
+            <div class="output-box">15
+3.0</div>
         </div>
 
         <!-- SLIDE 6: Generic Extensions (halaman 10) -->
@@ -333,8 +365,10 @@ void main(){
     print([1, 2, 2, 3, 3, 3].distinct()); // [1, 2, 3] 
 }</code></div>
             <div class="dartpad-container">
-                <iframe class="dartpad-frame" src="https://dartpad.dev/embed-flutter.html?id=f0f27a10715502eb5f3f4c8f257efe6d&theme=dark&run=true" loading="lazy" frameborder="0" allow="scripts; allow-same-origin; allow-forms; allow-popups" allowfullscreen title="DartPad Slide 6"></iframe>
+                <iframe class="dartpad-frame" src="https://dartpad.dev/embed-dart.html?id=f0f27a10715502eb5f3f4c8f257efe6d&theme=dark&run=true" loading="lazy" frameborder="0" allow="scripts; allow-same-origin; allow-forms; allow-popups" allowfullscreen title="DartPad Slide 6"></iframe>
             </div>
+            <div class="output-box">[[1, 2, 3], [4, 5, 6], [7]]
+[1, 2, 3]</div>
         </div>
 
         <!-- SLIDE 7: Extension untuk Null Safety (halaman 8) -->
@@ -360,8 +394,10 @@ void main(){
     print(name.withDefault('Guest')); // 'Guest' 
 }</code></div>
             <div class="dartpad-container">
-                <iframe class="dartpad-frame" src="https://dartpad.dev/embed-flutter.html?id=bd578cde6f0c4ee18bce5234257cd650&theme=dark&run=true" loading="lazy" frameborder="0" allow="scripts; allow-same-origin; allow-forms; allow-popups" allowfullscreen title="DartPad Slide 7"></iframe>
+                <iframe class="dartpad-frame" src="https://dartpad.dev/embed-dart.html?id=bd578cde6f0c4ee18bce5234257cd650&theme=dark&run=true" loading="lazy" frameborder="0" allow="scripts; allow-same-origin; allow-forms; allow-popups" allowfullscreen title="DartPad Slide 7"></iframe>
             </div>
+            <div class="output-box">true
+Guest</div>
         </div>
 
         <!-- SLIDE 8: Praktik 1 - Utilities untuk Dart Types (halaman 9) -->
@@ -399,11 +435,14 @@ void main(){
     print(2.power(3)); // 8 
 }</code></div>
             <div class="dartpad-container">
-                <iframe class="dartpad-frame" src="https://dartpad.dev/embed-flutter.html?id=cd9744d3778bb68f3a20398121c4a532&theme=dark&run=true" loading="lazy" frameborder="0" allow="scripts; allow-same-origin; allow-forms; allow-popups" allowfullscreen title="DartPad Slide 8"></iframe>
+                <iframe class="dartpad-frame" src="https://dartpad.dev/embed-dart.html?id=cd9744d3778bb68f3a20398121c4a532&theme=dark&run=true" loading="lazy" frameborder="0" allow="scripts; allow-same-origin; allow-forms; allow-popups" allowfullscreen title="DartPad Slide 8"></iframe>
             </div>
+            <div class="output-box">Rp1.500.000
+true
+8</div>
         </div>
 
-        <!-- SLIDE 9: Extension tanpa nama (halaman 11) -->
+        <!-- SLIDE 9: Extension tanpa nama (hanya untuk library yang sama) -->
         <div class="slide-card">
             <div class="slide-header">
                 <span class="slide-num">SLIDE 9</span>
@@ -428,8 +467,10 @@ void main() {
     print(today.startOfDay); // 2026-02-20 00:00:00.000  
 }</code></div>
             <div class="dartpad-container">
-                <iframe class="dartpad-frame" src="https://dartpad.dev/embed-flutter.html?id=1a8d8534fb930480ab2ca733b650a6c7&theme=dark&run=true" loading="lazy" frameborder="0" allow="scripts; allow-same-origin; allow-forms; allow-popups" allowfullscreen title="DartPad Slide 9"></iframe>
+                <iframe class="dartpad-frame" src="https://dartpad.dev/embed-dart.html?id=1a8d8534fb930480ab2ca733b650a6c7&theme=dark&run=true" loading="lazy" frameborder="0" allow="scripts; allow-same-origin; allow-forms; allow-popups" allowfullscreen title="DartPad Slide 9"></iframe>
             </div>
+            <div class="output-box">2024-01-22
+2026-02-20 00:00:00.000</div>
         </div>
 
         <!-- SLIDE 10: Penanganan Konflik Extension (halaman 12) -->
@@ -459,8 +500,9 @@ void main(){
     se.capitalize(text); // Gunakan dengan prefix 
 }</code></div>
             <div class="dartpad-container">
-                <iframe class="dartpad-frame" src="https://dartpad.dev/embed-flutter.html?id=9b68e0520ad9e4e43a819539b6dfb8e7&theme=dark&run=true" loading="lazy" frameborder="0" allow="scripts; allow-same-origin; allow-forms; allow-popups" allowfullscreen title="DartPad Slide 10"></iframe>
+                <iframe class="dartpad-frame" src="https://dartpad.dev/embed-dart.html?id=9b68e0520ad9e4e43a819539b6dfb8e7&theme=dark&run=true" loading="lazy" frameborder="0" allow="scripts; allow-same-origin; allow-forms; allow-popups" allowfullscreen title="DartPad Slide 10"></iframe>
             </div>
+            <div class="output-box">Hello</div>
         </div>
 
         <!-- SLIDE 11: Extension untuk Custom Classes - Product (halaman 13) -->
@@ -514,8 +556,12 @@ void main(){
     print(keyboard.isExpensive);
 }</code></div>
             <div class="dartpad-container">
-                <iframe class="dartpad-frame" src="https://dartpad.dev/embed-flutter.html?id=038f09c854de69d94396d8ede8dca225&theme=dark&run=true" loading="lazy" frameborder="0" allow="scripts; allow-same-origin; allow-forms; allow-popups" allowfullscreen title="DartPad Slide 11"></iframe>
+                <iframe class="dartpad-frame" src="https://dartpad.dev/embed-dart.html?id=038f09c854de69d94396d8ede8dca225&theme=dark&run=true" loading="lazy" frameborder="0" allow="scripts; allow-same-origin; allow-forms; allow-popups" allowfullscreen title="DartPad Slide 11"></iframe>
             </div>
+            <div class="output-box">Laptop - Rp13.500.000
+true
+Keyboard - Rp750.000
+false</div>
         </div>
 
         <!-- SLIDE 12: Extension untuk Custom Classes - DoubleRupiahFormatter & ProductExtensions lanjutan -->
@@ -554,8 +600,12 @@ extension ProductExtensions on Product {
     bool get isExpensive => price > 1000000;
 }</code></div>
             <div class="dartpad-container">
-                <iframe class="dartpad-frame" src="https://dartpad.dev/embed-flutter.html?id=c7efd9765c6882fce9652a850ccdc944&theme=dark&run=true" loading="lazy" frameborder="0" allow="scripts; allow-same-origin; allow-forms; allow-popups" allowfullscreen title="DartPad Slide 12"></iframe>
+                <iframe class="dartpad-frame" src="https://dartpad.dev/embed-dart.html?id=c7efd9765c6882fce9652a850ccdc944&theme=dark&run=true" loading="lazy" frameborder="0" allow="scripts; allow-same-origin; allow-forms; allow-popups" allowfullscreen title="DartPad Slide 12"></iframe>
             </div>
+            <div class="output-box">Laptop - Rp15.000.000
+true
+Keyboard - Rp12.000.000
+false</div>
         </div>
 
         <!-- SLIDE 13: Validator Extension (halaman 15) -->
@@ -587,8 +637,12 @@ void main(){
     print('Name minimal 5 karakter: ${name.hasMinLength(5)}');
 }</code></div>
             <div class="dartpad-container">
-                <iframe class="dartpad-frame" src="https://dartpad.dev/embed-flutter.html?id=cbdce1e49679f0d2bf3cec2c9c8b28ef&theme=dark&run=true" loading="lazy" frameborder="0" allow="scripts; allow-same-origin; allow-forms; allow-popups" allowfullscreen title="DartPad Slide 13"></iframe>
+                <iframe class="dartpad-frame" src="https://dartpad.dev/embed-dart.html?id=cbdce1e49679f0d2bf3cec2c9c8b28ef&theme=dark&run=true" loading="lazy" frameborder="0" allow="scripts; allow-same-origin; allow-forms; allow-popups" allowfullscreen title="DartPad Slide 13"></iframe>
             </div>
+            <div class="output-box">Email valid: true
+Phone valid: true
+Name hanya huruf: true
+Name minimal 5 karakter: true</div>
         </div>
 
         <!-- SLIDE 14: Penutup -->
