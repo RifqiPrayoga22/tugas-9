@@ -121,37 +121,43 @@
             font-family: inherit;
         }
 
-        /* Perbaikan utama: memastikan container DartPad memiliki ukuran yang konsisten */
+        /* ========== PERBAIKAN TOTAL UNTUK UKURAN DARTPAD ========== */
         .dartpad-container {
-            margin: 0.75rem 1.25rem 1.25rem 1.25rem;
-            border: 1px solid #334155;
-            border-radius: 0.5rem;
-            overflow: hidden;
-            background: #0a0c15;
-            /* Ukuran tetap yang tidak akan berubah karena pengaruh eksternal */
-            width: calc(100% - 2.5rem);
-            max-width: 100%;
-            min-height: 460px;
-            position: relative;
-            /* Mengisolasi dari konteks luar */
-            isolation: isolate;
-        }
-
-        .dartpad-frame {
-            width: 100% !important;
+            display: block !important;
+            margin: 0.75rem 1.25rem 1.25rem 1.25rem !important;
+            padding: 0 !important;
+            border: 1px solid #334155 !important;
+            border-radius: 0.5rem !important;
+            overflow: hidden !important;
+            background: #0a0c15 !important;
+            
+            /* Ukuran absolut yang tidak bisa diubah oleh GitHub */
+            width: calc(100% - 2.5rem) !important;
+            max-width: calc(100% - 2.5rem) !important;
+            min-width: auto !important;
             height: 460px !important;
             min-height: 460px !important;
             max-height: 460px !important;
-            border: none;
-            display: block;
-            /* Mencegah penyusutan atau perubahan ukuran */
-            flex-shrink: 0;
-            object-fit: fill;
-            /* Memastikan tidak ada margin/padding tambahan dari browser */
-            margin: 0;
-            padding: 0;
-            /* Menjaga rasio aspek tetap */
-            aspect-ratio: auto;
+            
+            position: relative !important;
+            isolation: isolate !important;
+        }
+
+        .dartpad-frame {
+            display: block !important;
+            width: 100% !important;
+            min-width: 100% !important;
+            max-width: 100% !important;
+            height: 460px !important;
+            min-height: 460px !important;
+            max-height: 460px !important;
+            
+            border: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            flex-shrink: 0 !important;
+            object-fit: fill !important;
+            aspect-ratio: auto !important;
         }
 
         /* Tambahan: output box */
@@ -177,13 +183,15 @@
             font-weight: 600;
         }
 
-        /* Aturan mobile: tetap menggunakan ukuran yang proporsional */
         @media (max-width: 640px) {
             .dartpad-container {
-                min-height: 400px;
-                width: calc(100% - 2rem);
-                margin-left: 1rem;
-                margin-right: 1rem;
+                height: 400px !important;
+                min-height: 400px !important;
+                max-height: 400px !important;
+                width: calc(100% - 2rem) !important;
+                max-width: calc(100% - 2rem) !important;
+                margin-left: 1rem !important;
+                margin-right: 1rem !important;
             }
             .dartpad-frame {
                 height: 400px !important;
@@ -196,9 +204,9 @@
             .slide-judul {
                 font-size: 1rem;
             }
-            .teori-box, .code-wrapped, .dartpad-container, .output-box {
-                margin-left: 1rem;
-                margin-right: 1rem;
+            .teori-box, .code-wrapped, .output-box {
+                margin-left: 1rem !important;
+                margin-right: 1rem !important;
             }
         }
 
